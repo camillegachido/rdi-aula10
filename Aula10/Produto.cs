@@ -1,6 +1,6 @@
 using System;
 
-internal class Produto
+public class Produto
 {
     Random rnd = new Random();
     public Produto(string nome, double valor)

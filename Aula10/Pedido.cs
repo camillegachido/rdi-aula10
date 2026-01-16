@@ -1,8 +1,6 @@
 using System;
-using System.Numerics;
-using System.Security.Cryptography;
 
-internal class Pedido
+public class Pedido
 {
     Random rnd = new Random();
     
