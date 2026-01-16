@@ -2,9 +2,11 @@ using System;
 
 internal class Produto
 {
-    public Produto(int id, string nome, double valor)
+    Random rnd = new Random();
+    public Produto(string nome, double valor)
     {
-        (Id, Nome, Valor) = (id, nome, valor);
+        (Nome, Valor) = (nome, valor);
+        Id = rnd.Next();
     }
 
     public string Nome { get; set; }
