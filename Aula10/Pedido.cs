@@ -43,7 +43,12 @@ internal class Pedido
         {
             Console.WriteLine("Pedido Finalizado\n");
             Console.WriteLine($"Total: {Total} \n");
-            Console.WriteLine("Pedido Finalizado\n");
+
+            Console.WriteLine("Resumo do Pedido\n");
+            for(int i=0; i < Produtos.Length; i++)
+            {
+                Console.WriteLine($"{Produtos[i].Nome} - R$: {Produtos[i].Valor}");              
+            }
         }
     }
 
