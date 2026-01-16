@@ -10,8 +10,9 @@ namespace Aula10
             Produtos = new List<Produto>();
             Pedidos = new List<Pedido>();
         }
-        public void CadastrarProduto(Produto produto)
+        public void CadastrarProduto(string nome, double valor)
         {
+            Produto produto = new Produto(nome, valor);
             Produtos.Add(produto);
             Console.WriteLine("Produto adicionado com sucesso!");
         }
