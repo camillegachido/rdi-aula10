@@ -1,5 +1,5 @@
 # 🍔 Sistema de Rede de Fast Food (POO)
-## Grupo: (integrantes do grupo)
+## Grupo: Fernanda Worm, Gabriela Miranda e Priscilla Trevizan
 
 
 Este projeto consiste no desenvolvimento de um **sistema orientado a objetos** que simula o funcionamento básico de uma **rede de fast food**.  
