@@ -8,23 +8,24 @@
             Produtos = new List<Produto>();
             Pedidos = new List<Pedido>();
         }
-        public void CadastrarProduto(string nome, double valor)
+        public void CadastrarProduto(int id, string nome, double valor)
         {
-            Produto produto = new Produto(nome, valor);
+            Produto produto = new Produto(id, nome, valor);
             Produtos.Add(produto);
             Console.WriteLine("Produto adicionado com sucesso!");
         }
-        public void BuscarProdutoPorId(int id)
+        public Produto BuscarProdutoPorId(int id)
         {
             foreach (var produto in Produtos)
             {
                 if (produto.Id == id)
                 {
                     Console.WriteLine($"Produto encontrado: {produto.Nome}");
-                    return;
+                    return produto;
                 }
             }
             Console.WriteLine("Produto com esse id não encontrado.");
+            return null;
         }
 
         public void ListarProdutosDisponiveis()
