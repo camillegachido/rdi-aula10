@@ -2,11 +2,9 @@ using System;
 
 public class Produto
 {
-    Random rnd = new Random();
-    public Produto(string nome, double valor)
+    public Produto(int id, string nome, double valor)
     {
-        (Nome, Valor) = (nome, valor);
-        Id = rnd.Next();
+        (Id, Nome, Valor) = (id, nome, valor);
     }
 
     public string Nome { get; set; }
