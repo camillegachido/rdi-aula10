@@ -65,7 +65,7 @@ class Program{
 
                     if (acao == 2)
                     {
-                                usuario.FazerPedido(restaurante, pedido);
+                                restaurante.AdicionarPedido(pedido);
 
                         bool finalizado = pedido.FinalizarPedido();
                         if (finalizado)

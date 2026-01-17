@@ -1,10 +1,12 @@
 namespace Aula10;
 public class Usuario
 
+
 {
     public string Nome { get; set; }
     public string Telefone { get; set; }
     public List<Pedido> Pedidos { get; set; }
+
 
     public Usuario(string nome, string telefone)
     {
@@ -12,18 +14,23 @@ public class Usuario
         Telefone = telefone;
     }
 
+
 //Fazer Pedidos dentro do Usuario
+
 
    public void FazerPedido(Restaurante restaurante, Pedido pedido)
     {
         // Associa o pedido ao usuário
         this.Pedidos.Add(pedido);
 
+
         // Adiciona o pedido à lista do restaurante
         restaurante.AdicionarPedido(pedido);
 
+
         Console.WriteLine($"Pedido de {Nome} enviado para o restaurante.");
     }
+
 
          public void VerPedidosAnteriores()
     {
@@ -33,6 +40,7 @@ public class Usuario
             return;
         }
 
+
         Console.WriteLine("\n=== Seus pedidos anteriores ===");
         foreach (var p in Pedidos)
         {
@@ -41,9 +49,3 @@ public class Usuario
         Console.WriteLine();
     }
 }
-
-
-
-
-
-    
