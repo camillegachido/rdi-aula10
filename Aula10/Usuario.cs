@@ -1,5 +1,3 @@
-namespace Aula10;
-
 public class Usuario
 {
     public string Nome { get; private set; }

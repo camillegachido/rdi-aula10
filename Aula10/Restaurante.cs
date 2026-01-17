@@ -1,5 +1,3 @@
-namespace Aula10
-{
     public class Restaurante
     {
         public List<Produto> Produtos { get; set; }
@@ -44,4 +42,3 @@ namespace Aula10
             }
         }
     }
-}
