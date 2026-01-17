@@ -201,8 +201,8 @@ namespace FastFoodSimples
             restaurante.CadastrarProduto(new Produto(1, "Hamburguer da Grupo 8", 18.90m, 10));
             restaurante.CadastrarProduto(new Produto(2, "Batata Frita", 9.50m, 10));
             restaurante.CadastrarProduto(new Produto(3, "Coca Zero", 7.00m, 10));
-            restaurante.CadastrarProduto(new Produto(3, "Fanta Uva", 7.00m, 10));
-            restaurante.CadastrarProduto(new Produto(3, "Guarana", 7.00m, 10));
+            restaurante.CadastrarProduto(new Produto(4, "Fanta Uva", 7.00m, 10));
+            restaurante.CadastrarProduto(new Produto(5, "Guarana", 7.00m, 10));
 
             Console.WriteLine("Bem vindo ao Pônei Donald!");
             Console.WriteLine();
