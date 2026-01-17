@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 public class Usuario
 {
     public string Nome { get; private set; }
@@ -36,7 +38,12 @@ public class Usuario
 
         foreach (var pedido in Pedidos)
         {
-            Console.WriteLine(pedido);
+            Console.WriteLine($"\nPedido #{pedido.Id} - {pedido.Hora}");
+            foreach(var produto in pedido.Produtos)
+            {
+                Console.WriteLine($"- {produto.Nome} (R$ {produto.Valor})");
+            }
+            Console.WriteLine($"Total: R$ {pedido.CalcularTotal()}");
         }
     }
 }
