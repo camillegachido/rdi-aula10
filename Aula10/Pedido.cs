@@ -3,50 +3,50 @@ using System;
 public class Pedido
 {
     Random rnd = new Random();
-    
+
     public Pedido(Usuario usuario)
     {
         (Usuario) = (usuario);
 
         Id = rnd.Next();
         Hora = DateTime.Now.ToString("dd mm yyyy,hh:mm:ss");
-        Produto[] Produtos = [];
-        Total = 0;
+        Produtos = new List<Produto>();
     }
 
     public int Id { get; }
     public string Hora {get; set;}
     public Usuario Usuario {get; set;}
-    public Produto[] Produtos {get; set;}
-    public double Total {get; set;}
+    public List<Produto> Produtos { get; set; }
 
     public void AdicionarProduto(Produto produto)
     {
-        _ = Produtos.Append(produto);
+        Produtos.Add(produto);
     }
 
     public double CalcularTotal()
     {
+        double total = 0;
         foreach (Produto produto in Produtos)
         {
-            Total += produto.Valor;
+            total += produto.Valor;
         }
 
-        return Total;
+        return total;
     }
 
     public void FinalizarPedido()
     {
-        if(Produtos.Length > 0)
+        if(Produtos.Count > 0)
         {
             Console.WriteLine("Pedido Finalizado\n");
-            Console.WriteLine($"Total: {Total} \n");
+            Console.WriteLine($"Total: {CalcularTotal()} \n");
 
             Console.WriteLine("Resumo do Pedido\n");
-            for(int i=0; i < Produtos.Length; i++)
+            for(int i=0; i < Produtos.Count; i++)
             {
                 Console.WriteLine($"{Produtos[i].Nome} - R$: {Produtos[i].Valor}");              
             }
+            Console.WriteLine("\n");
         }
     }
 
