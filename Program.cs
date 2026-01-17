@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace FastFoodSimples
 {
-    // =======================
+
     // Classe Usuario
-    // =======================
+
     public class Usuario
     {
         public string Nome { get; set; }
@@ -50,9 +50,9 @@ namespace FastFoodSimples
         }
     }
 
-    // =======================
+
     // Classe Produto
-    // =======================
+
     public class Produto
     {
         public int Id { get; set; }
@@ -71,9 +71,9 @@ namespace FastFoodSimples
         }
     }
 
-    // =======================
+    
     // Classe Pedido
-    // =======================
+    
     public class Pedido
     {
         public int Id { get; set; }
@@ -135,9 +135,9 @@ namespace FastFoodSimples
         }
     }
 
-    // =======================
+    
     // Classe Restaurante
-    // =======================
+    
     public class Restaurante
     {
         public List<Produto> Produtos { get; set; }
@@ -186,9 +186,9 @@ namespace FastFoodSimples
         }
     }
 
-    // =======================
+
     // Programa (Interface)
-    // =======================
+
     class Program
     {
         static int proximoIdPedido = 1;
