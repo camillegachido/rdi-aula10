@@ -14,14 +14,14 @@ class Program{
         restaurante.CadastrarProduto(new Produto(4, "Refrigerante", 7.00m));
         restaurante.CadastrarProduto(new Produto(5, "Milkshake", 14.90m));
 
-        Console.WriteLine("Bem vindo ao Pônei Donald!");
+        Console.WriteLine("======= Bem vindo ao Pônei Donald! =======\n");
         Console.WriteLine("Vamos fazer seu cadastro.\n");
 
-        Console.Write("Nome: ");
-        string nome = Console.ReadLine();
+        Console.WriteLine("Nome: ");
+        string nome = Console.ReadLine() ?? "";
 
-        Console.Write("Telefone (identificador): ");
-        string telefone = Console.ReadLine();
+        Console.WriteLine("Telefone (identificador): ");
+        string telefone = Console.ReadLine() ?? "";
 
         var usuario = new Usuario(nome, telefone);
 
@@ -35,7 +35,7 @@ class Program{
             Console.WriteLine("3) Sair");
             Console.Write("Escolha uma opção: ");
 
-            int opcao = int.Parse(Console.ReadLine());
+            int opcao = int.Parse(Console.ReadLine() ?? "0");
 
             if (opcao == 1)
             {
@@ -46,7 +46,7 @@ class Program{
                     restaurante.ProdutosDisponiveis();
 
                     Console.Write("Digite o ID do produto para adicionar: ");
-                    int idProduto = int.Parse(Console.ReadLine());
+                    int idProduto = int.Parse(Console.ReadLine() ?? "0");
 
                     var produto = restaurante.BuscarProdutoPorId(idProduto);
                     if (produto == null)
@@ -61,7 +61,7 @@ class Program{
                     Console.WriteLine("1) Adicionar mais um produto");
                     Console.WriteLine("2) Finalizar pedido");
                     Console.Write("Escolha: ");
-                    int acao = int.Parse(Console.ReadLine());
+                    int acao = int.Parse(Console.ReadLine() ?? "0");
 
                     if (acao == 2)
                     {
@@ -80,20 +80,20 @@ class Program{
                         break;
                     }
                 }
-            }
-            else if (opcao == 2)
-            {
-                usuario.VerPedidosAnteriores();
-            }
-            else if (opcao == 3)
-            {
-                Console.WriteLine("\nValeu! Até a próxima");
-                break;
-            }
-            else
-            {
-                Console.WriteLine("Opção inválida.\n");
-            }
+                            }
+                            else if (opcao == 2)
+                            {
+                                usuario.VerPedidosAnteriores();
+                                }
+                                else if (opcao == 3)
+                                {
+                                    Console.WriteLine("\nValeu! Até a próxima");
+                                    break;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Opção inválida.\n");
+                                    }
         }
     }
 }
