@@ -1,5 +1,5 @@
-using System;
-class Usuario
+namespace Aula10;
+public class Usuario
 
 {
     public string Nome { get; set; }

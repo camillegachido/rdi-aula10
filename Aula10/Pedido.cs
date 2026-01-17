@@ -1,6 +1,6 @@
-using System;
+namespace Aula10;
 
-class Pedido
+public class Pedido
 {
     public int Id { get; set; }
     public DateTime Hora { get; set; } = DateTime.Now;

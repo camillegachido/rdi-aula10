@@ -1,8 +1,8 @@
-using System;
-class Restaurante
+namespace Aula10;
+public class Restaurante
 {
-    public List<Produto> Produtos { get; set; }
-    public List<Pedido> Pedidos { get; set; }
+       public List<Produto> Produtos { get; set; } = new List<Produto>();
+        public List<Pedido> Pedidos { get; set; } = new List<Pedido>();
 
 
     public void CadastrarProduto(Produto produto)
@@ -10,17 +10,17 @@ class Restaurante
         Produtos.Add(produto);
     }
 
-    public void BuscarProdutoPorId(int id)
+    public Produto BuscarProdutoPorId(int id)
     {
         foreach (var produto in Produtos)
         {
             if (produto.Id == id)
             {
                 Console.WriteLine($"Produto encontrado: {produto.Nome}, Valor: R$ {produto.Valor}");
-                return;
+                return produto;
             }
         }
-        Console.WriteLine("Produto não encontrado.");
+        Console.WriteLine("Produto não encontrado."); return null;
     }
 
     public void ProdutosDisponiveis()
