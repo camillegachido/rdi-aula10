@@ -41,17 +41,14 @@ void criaPedido()
 {
     Pedido pedido = new Pedido(usuario);
     int idProduto;
-    Console.WriteLine("Digite a Id do produto que deseja adicionar ao pedido ou digite 0 finalizar o pedido");
-    idProduto = Convert.ToInt32(Console.ReadLine());
-    pedido.AdicionarProduto(restaurante.BuscarProdutoPorId(idProduto));   
-
-    while (idProduto != 0)
+    
+    do
     {
         Console.WriteLine("Digite a Id do produto que deseja adicionar ao pedido ou digite 0 finalizar o pedido");
         idProduto = Convert.ToInt32(Console.ReadLine());
         if(idProduto != 0)
-            pedido.AdicionarProduto(restaurante.BuscarProdutoPorId(idProduto));   
-    }
+            pedido.AdicionarProduto(restaurante.BuscarProdutoPorId(idProduto));    
+    } while (idProduto != 0);
 
     usuario.FazerPedido(restaurante, pedido); 
     pedido.FinalizarPedido();
