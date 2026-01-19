@@ -32,7 +32,7 @@ public class Usuario
     {
         if (Pedidos.Count == 0)
         {
-            Console.WriteLine("Nenhum pedido realizado.");
+            Console.WriteLine("Nenhum pedido realizado.\n");
             return;
         }
 
@@ -43,7 +43,7 @@ public class Usuario
             {
                 Console.WriteLine($"- {produto.Nome} (R$ {produto.Valor})");
             }
-            Console.WriteLine($"Total: R$ {pedido.CalcularTotal()}");
+            Console.WriteLine($"Total: R$ {pedido.CalcularTotal()}\n");
         }
     }
 }
