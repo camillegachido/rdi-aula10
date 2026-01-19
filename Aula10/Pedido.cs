@@ -9,7 +9,7 @@ public class Pedido
         (Usuario) = (usuario);
 
         Id = rnd.Next();
-        Hora = DateTime.Now.ToString("dd mm yyyy,hh:mm:ss");
+        Hora = DateTime.Now.ToString("dd/MM/yyyy, hh:mm:ss");
         Produtos = new List<Produto>();
     }
 
@@ -20,7 +20,8 @@ public class Pedido
 
     public void AdicionarProduto(Produto produto)
     {
-        Produtos.Add(produto);
+        if(produto != null)
+            Produtos.Add(produto);
     }
 
     public double CalcularTotal()
@@ -36,10 +37,11 @@ public class Pedido
 
     public void FinalizarPedido()
     {
+        Console.WriteLine("\n");
         if(Produtos.Count > 0)
         {
             Console.WriteLine("Pedido Finalizado\n");
-            Console.WriteLine($"Total: {CalcularTotal()} \n");
+            Console.WriteLine($"Total: R$ {CalcularTotal()} \n");
 
             Console.WriteLine("Resumo do Pedido\n");
             for(int i=0; i < Produtos.Count; i++)
